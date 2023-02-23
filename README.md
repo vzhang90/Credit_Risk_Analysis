@@ -4,15 +4,15 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 From the credit card dataset in LendingClub <sub>(a peer-to-peer lending services company)</sub>, Python will be used to build and evaluate several machine learning models to predict credit risk with the goal of helping banks and financial institutions better navigate anomalies, reduce risk cases, monitor portfolios, and provide recommendations on what to do in cases of fraud.
 
 ## Overview of Analysis
- > This Credit Risk Analysis applies machine learning through the `imbalanced-learn` and `scikit-learn` libraries to investigate how three machine learning models compare at predicting credit risk by using **Resampling**
+ > This Credit Risk Analysis applies machine learning through the `imbalanced-learn` and `scikit-learn` libraries to investigate how three machine learning models compare at *Predicting Credit Risk* by using **Resampling**
 
  ---
- Use **Resampling Models** to predict credit risk initially by:
+ Use **Resampling Models** to *Predict Credit Risk* initially by:
  - ***oversampling*** the data using the `RandomOverSampler` and `SMOTE` algorithms  
  - ***undersamplying*** the data using the `ClusterCentroids` algorithm
 
 ---
-Then by using the `SMOTEENN` algorithm, the dataset will be resampled with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
+Then by using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
 - *view* the **count of the target classes**
 - *train* a **logistic regression classifier**
 - *calculate* the **balanced accuracy score**
