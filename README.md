@@ -13,8 +13,7 @@ Then, the dataset will be resampled with a combinatorial approach of over- and u
 
 --- 
 Finally, the performance of these two machine learning models can be evaluated to to compare which is better at predicting credit risk: 
-1) `BalancedRandomClassifier` 
-2) `EasyEnsembleClassifier`
+           `BalancedRandomClassifier`    or     `EasyEnsembleClassifier`
 
 ## Results
 
