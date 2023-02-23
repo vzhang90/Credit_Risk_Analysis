@@ -9,8 +9,12 @@ Using the credit card dataset from LendingClub (a peer-to-peer lending services 
  2) ***undersamplying*** the data using the `ClusterCentroids` algorithm
 
 ---
-Then, the dataset will be resampled with a combinatorial approach of ***over-*** and ***undersampling*** using the `SMOTEENN` algorithm 
-- in order to **view the count of the target classes**, **train a logistic regression classifier**, **calculate the balanced accuracy score**, **generate a confusion matrix**, and **generate a classification report**
+Then, the dataset will be resampled with a combinatorial approach of ***over-*** and ***undersampling*** using the `SMOTEENN` algorithm in order to:
+- **view the count of the target classes**
+- **train a logistic regression classifier**
+- **calculate the balanced accuracy score**
+- **generate a confusion matrix**
+- **generate a classification report**
 
 --- 
 Finally, the performance of these two machine learning models can be evaluated to to compare which is better at predicting credit risk: 
