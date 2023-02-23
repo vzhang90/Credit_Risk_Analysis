@@ -17,8 +17,7 @@ Then using the `SMOTEENN` algorithm, the dataset will be resampled with a combin
 - *generate* a **classification report**
 
 --- 
-Finally, the performance of two machine learning models will be evaluated to to compare which is better at predicting credit risk:  
-    `BalancedRandomClassifier`    or     `EasyEnsembleClassifier`?
+Finally, the performance of two machine learning models will be evaluated to to compare which is better at predicting credit risk:  `BalancedRandomClassifier`    or     `EasyEnsembleClassifier`?
   
 
 ## Results
