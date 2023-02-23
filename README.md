@@ -7,12 +7,12 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
  > This Credit Risk Analysis applies machine learning through the `imbalanced-learn` and `scikit-learn` libraries to investigate how three machine learning models compare at *Predicting Credit Risk* by using **Resampling**
 
  ---
- Use **Resampling Models** to *Predict Credit Risk* initially by:
- - ***oversampling*** the data using the `RandomOverSampler` and `SMOTE` algorithms  
- - ***undersamplying*** the data using the `ClusterCentroids` algorithm
+ Initially, **Resample** the dataset to *Predict Credit Risk* by:
+ - ***oversampling*** using the `RandomOverSampler` and `SMOTE` algorithms  
+ - ***undersamplying*** using the `ClusterCentroids` algorithm
 
 ---
-Then by using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
+Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
 - *view* the **count of the target classes**
 - *train* a **logistic regression classifier**
 - *calculate* the **balanced accuracy score**
