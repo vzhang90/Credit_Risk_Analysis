@@ -6,41 +6,42 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 Resources: [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv)
 
 ## Overview of Analysis
- > This Credit Risk Analysis applies six machine learning to investigate how each compare at *Predicting Credit Risk* by using **Resampling** in order to:
- > - *view* the **count of the target classes**
+ This Credit Risk Analysis applies six machine learning to investigate how each compare at *Predicting Credit Risk*
+
+ ---
+> Resampling Machine Learning Models code: [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
+
+
+ Initially through the `imbalanced-learn` and `scikit-learn` libraries, four **Resampling Models** will be used to *Predict Credit Risk* in order to:
+> - *view* the **count of the target classes**
  > - *train* a **logistic regression classifier**
  > - *calculate* the **balanced accuracy score**
  > - *generate* a **confusion matrix**
  > - *generate* a **classification report**
-
- ---
- Initially through the `imbalanced-learn` and `scikit-learn` libraries , **Resample** the dataset to *Predict Credit Risk*
- [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
- - ***oversampling*** using the `RandomOverSampler` and `SMOTE` algorithms  
- - ***undersamplying*** using the `ClusterCentroids` algorithm
-
-Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
-
+1) ***Naive Random Oversampling*** using the `RandomOverSampler` algorithm 
+2) ***Oversampling*** using the `SMOTE` algorithms  
+3) ***Undersamplying*** using the `ClusterCentroids` algorithm
+4) Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
 
 --- 
 Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers,`BalancedRandomClassifier` and `EasyEnsembleClassifier`, will be used to predict credit risk and evaluate each model. Using both algorithms, resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
-[credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
+> Ensemble Classifers to Predict Credit Risk: [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)
   
 
 ## Results
 
 Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
-1) Naive Random Oversampling using `RandomOverSampler` algorithm
+1) **Naive Random Oversampling** using `RandomOverSampler` algorithm
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
-2) `SMOTE` Oversampling
+2) `SMOTE` **Oversampling**
 ![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
-3) Undersampling using `ClusterCentroids` algorithm
+3) **Undersampling** using `ClusterCentroids` algorithm
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
-4) Combination (Over and Under) Sampling with `SMOTEENN` algorithm
+4) **Combination (Over and Under) Sampling** with `SMOTEENN` algorithm
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
-5) Balanced Forest Classifier
+5) **Balanced Forest Classifier**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
-6) Easy Ensemble AdaBoost Classifier
+6) **Easy Ensemble AdaBoost Classifier**
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
 
 ## Summary
