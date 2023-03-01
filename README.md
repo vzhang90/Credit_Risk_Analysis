@@ -9,7 +9,7 @@ Resources: [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_A
  This Credit Risk Analysis applies six machine learning to investigate how each compare at *Predicting Credit Risk*
 
  ---
-> Resampling Machine Learning Models code: [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)
+> *Resampling Machine Learning Models code: [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)*
 
 
  Initially through the `imbalanced-learn` and `scikit-learn` libraries, four **Resampling Models** will be used to *Predict Credit Risk* in order to:
