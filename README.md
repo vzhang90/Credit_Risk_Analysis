@@ -33,9 +33,14 @@ Six machine learning models were used to calculate the balance accuracy score, p
 1) Naive Random Oversampling using `RandomOverSampler` algorithm
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
 2) `SMOTE` Oversampling
+![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
 3) Undersampling using `ClusterCentroids` algorithm
-4) Combinatio (Over and Under) Sampling with `SMOTEENN` algorithm
+![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
+4) Combination (Over and Under) Sampling with `SMOTEENN` algorithm
+![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
 5) Balanced Forest Classifier
+![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
 6) Easy Ensemble AdaBoost Classifier
+![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
 
 ## Summary
