@@ -21,11 +21,11 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 2) *Oversampling* using `SMOTE` algorithm  
 3) *Undersamplying* using `ClusterCentroids` algorithm
 
-For each of the above three resampling algorithms:
-- Used `LogisticRegression` classifier to make predictions and evaluate the model’s performance
-- Calculated the accuracy score of the model
-- Generated a confusion matrix
-- Printed out the imbalanced classification report
+> For each of the above three resampling algorithms:
+    - Used `LogisticRegression` classifier to make predictions and evaluate the model’s performance
+    - Calculated the accuracy score of the model
+    - Generated a confusion matrix
+    - Printed out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
