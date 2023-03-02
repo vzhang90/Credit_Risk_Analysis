@@ -115,14 +115,15 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 ## Summary
 When dealing with imbalanced classification problems, it is often useful to use metrics beyond just overall accuracy, as accuracy can be misleading in such scenarios.
 >> **Balanced accuracy score:** the average of the recall scores of all classes, which is calculated by summing up the recall scores of all classes and dividing by the number of classes. It provides a more reliable evaluation of a model's performance when the classes are imbalanced, as it takes into account the fact that the model might be performing well on the majority class but poorly on the minority class. 
->> **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.
+
+>> **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.  
+
 >> **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
 
 
 Comparatively between the imbalanced classification reports of the six machine learning models:
 - the **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier` is best at performing well in predicting both the majority and minority classes because of its highest ***Balanced Accuracy Score*** of 0.86
-- As shown with the ***Recall Score*** of 0.94, the **Easy Ensemble AdaBoost Classifier** machine learning model with `EasyEnsembleClassifier` algorithis also best at making the fewest false negative predictions 
-
-The technical analysis from the six machine learning models indicate each model makes few false negative predictions as shown in each of ***Precision Scores*** equal to 0.99
+- As shown with the ***Recall Score*** of 0.94, the **Easy Ensemble AdaBoost Classifier** machine learning model with `EasyEnsembleClassifier` algorithis also best at making the fewest false negative predictions
+- All models makes equally few false negative predictions as shown in each of ***Precision Scores*** equal to 0.99
 
 Between these six machine learning models, I would recommend the **Easy Ensemble AdaBoost Classifer** machine learning model using the `EasyEnsembleClassifier` algorithm to use in predicting credit risk.
