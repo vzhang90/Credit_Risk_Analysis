@@ -130,8 +130,8 @@ When dealing with imbalanced classification problems, it is often useful to use 
 
 
 Comparatively between the imbalanced classification reports of the six machine learning models:
-- the **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier` is best at performing well in predicting both the majority and minority classes because of its highest ***Balanced Accuracy Score*** of 0.86
-- As shown with the ***Recall Score*** of 0.94, the **Easy Ensemble AdaBoost Classifier** machine learning model with `EasyEnsembleClassifier` algorithis also best at making the fewest false negative predictions
-- All models makes equally few false negative predictions as shown in each of ***Precision Scores*** equal to 0.99
+- the **Easy Ensemble AdaBoost Classifier** using `EasyEnsembleClassifier` is best in predicting both the majority and minority classes because of its highest ***Balanced Accuracy Score*** of 0.86
+- As shown with the ***Recall Score*** of 0.94, the **Easy Ensemble AdaBoost Classifier** machine learning model using the `EasyEnsembleClassifier` algorithm is also best at making the fewest false negative predictions
+- All models make equally few false negative predictions as shown in each of ***Precision Scores*** equal to 0.99
 
 Between these six machine learning models, I would recommend the **Easy Ensemble AdaBoost Classifer** machine learning model using the `EasyEnsembleClassifier` algorithm to use in predicting credit risk.
