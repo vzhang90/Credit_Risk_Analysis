@@ -128,7 +128,7 @@ When dealing with imbalanced classification problems, it is often useful to use 
 
 --- 
 
-#### The six machine learning models:
+#### The six machine learning models employed in this Credit Risk Analysis:
 1) Naive Random Oversampling with `RandomOverSampler' randomly oversamples the minority class with `imblearn` library to increase number of minority class.
 
 2) SMOTE reduces risk of oversampling by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
@@ -150,4 +150,4 @@ Comparatively between the imbalanced classification reports of the six machine l
 
 
 
-Between these six machine learning models, I would recommend the **Easy Ensemble AdaBoost Classifer** machine learning model using the `EasyEnsembleClassifier` algorithm to use in predicting credit risk.
+Between these six machine learning models, I would recommend the **Easy Ensemble AdaBoost Classifer** machine learning model using the `EasyEnsembleClassifier` algorithm to predict credit risk.
