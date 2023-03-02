@@ -36,36 +36,36 @@ Six machine learning models were used to calculate the balance accuracy score, p
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 2) `SMOTE` **Oversampling**
 ![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 3) **Undersampling** using `ClusterCentroids`
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 4) **Combination (Over & Under) Sampling** with `SMOTEENN`
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 5) **`BalancedRandomForestClassifier`**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 6) **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier`
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
     - Recall Score
-
+---
 
 ## Summary
