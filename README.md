@@ -59,7 +59,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
     <ol>
         <li>Resampled training data using <code>BalancedRandomForestClassifier</code> algorithm with 100 estimators
         <li>Then, calculated the accuracy score of the model, generated a confusion matrix, and printed out the imbalanced classification report</li>
-        <li>Finally, printed the feature importance sorted in descending order (from most to least important feature), along with the feature score</li>
+        <li>Finally, listed the features sorted in descending order <em>(from most to least important feature by feature importance)</em>, along with the feature score</li>
     </ol>
   <li><em>Easy Ensemble AdaBoost Classifier</em></li>
     <ol>
