@@ -8,24 +8,25 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- This Credit Risk Analysis applies six machine learning to investigate how each compare at *Predicting Credit Risk*
+ This Credit Risk Analysis applies six machine learning to investigate how each compares at *Predicting Credit Risk*
 
  ---
- Initially through the `imbalanced-learn` and `scikit-learn` libraries, four **Resampling Models** will be used to *Predict Credit Risk* in order to view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report
-
-**The four machine learning models through Resampling:**
+ ### Resampling Models to Predict Credit Risk
+ Initially through the `imbalanced-learn` and `scikit-learn` libraries, three **Resampling Models** will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 1) ***Naive Random Oversampling*** using the `RandomOverSampler` algorithm 
 2) ***Oversampling*** using the `SMOTE` algorithms  
 3) ***Undersamplying*** using the `ClusterCentroids` algorithm
-4) Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling*** in order to:
+
+### Combination (Over and Under) Sampling with SMOTEENN algorithm to Predict Credit Risk
+4) Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling***
 
 --- 
+### Ensemble Classifiers to Predict Credit Risk
 Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers,`BalancedRandomClassifier` and `EasyEnsembleClassifier`, will be used to predict credit risk and evaluate each model. Using both algorithms, resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 
   
 
 ## Results
-
 Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
 1) **Naive Random Oversampling** using `RandomOverSampler` algorithm
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
