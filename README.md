@@ -31,7 +31,7 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 >    - Use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
 >    - Calculate the accuracy score of the model
 >    - Generate a confusion matrix
->    - Printe out the imbalanced classification report
+>    - Print out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
