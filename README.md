@@ -27,12 +27,12 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 3) *Cluster Centroid Undersamplying*
     - resample training data using `ClusterCentroids` algorithm
 
-*For each of the above three resampling algorithms:*
->    - use a random state of 1 to ensure consistency between tests
->    - use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
->    - calculate the accuracy score of the model
->    - generate a confusion matrix
->    - print out the imbalanced classification report
+> For each of the above three resampling algorithms:
+>>    - use a random state of 1 to ensure consistency between tests
+>>    - use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
+>>    - calculate the accuracy score of the model
+>>    - generate a confusion matrix
+>>    - print out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
