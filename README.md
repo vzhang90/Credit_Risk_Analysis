@@ -4,6 +4,8 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 From the credit card dataset in LendingClub <sub>(a peer-to-peer lending services company)</sub>, Python will be used to build and evaluate several machine learning models to predict credit risk with the goal of helping banks and financial institutions better navigate anomalies, reduce risk cases, monitor portfolios, and provide recommendations on what to do in cases of fraud.
 
 <sub>**Resources:** [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv)</sub>
+<sub>**Resampling Models code:** [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)</sub>
+<sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
  This Credit Risk Analysis applies six machine learning to investigate how each compare at *Predicting Credit Risk*
@@ -17,7 +19,6 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 - *train* a **logistic regression classifier**
 - *calculate* the **balanced accuracy score**
 - *generate* a **confusion matrix** - *generate* a **classification report**
-> <sub>**Resampling Machine Learning Models code:** [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb)</sub>
 
 **The four machine learning models through Resampling:**
 1) ***Naive Random Oversampling*** using the `RandomOverSampler` algorithm 
@@ -27,7 +28,7 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 
 --- 
 Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers,`BalancedRandomClassifier` and `EasyEnsembleClassifier`, will be used to predict credit risk and evaluate each model. Using both algorithms, resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
-> <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
+
   
 
 ## Results
