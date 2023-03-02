@@ -11,8 +11,8 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
  This Credit Risk Analysis applies six machine learning to investigate how each compares at *Predicting Credit Risk*
 
  ---
- ### Resampling Models to Predict Credit Risk
- Initially through the `imbalanced-learn` and `scikit-learn` libraries, three **Resampling Models** will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+### Resampling Models to Predict Credit Risk
+Initially through the `imbalanced-learn` and `scikit-learn` libraries, three **Resampling Models** will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 1) ***Naive Random Oversampling*** using the `RandomOverSampler` algorithm 
 2) ***Oversampling*** using the `SMOTE` algorithms  
 3) ***Undersamplying*** using the `ClusterCentroids` algorithm
