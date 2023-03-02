@@ -137,15 +137,8 @@ When dealing with imbalanced classification problems, it is often useful to use 
 
 4) Combination sampling with SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 
-The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model
-
-5) The Random Forest Classifier samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Random forest algorithms are beneficial because:
-    - Are robust against overfitting as all of those weak learners are trained on different pieces of the data
-    - Can be used to rank the importance of input variables in a natural way
-    - Can handle thousands of input variables without variable deletion
-    - Are robust to outliers and nonlinear data
-    - Run efficiently on large datasets
-
+5) The Random Forest Classifier samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Because random forest algorithms can run efficiently on large datasets handling thousands of input variables without variable deletion, this machine learning module is very robust against overfitting, outliers, and nonlinear data as all of those weak learners are trained on different pieces of the data. Additionally, this algorithm can also be used to rank the importance of input variables in a natural way.
+    
 6) Easy Ensemble AdaBoost Classifier uses the Boosting technique to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
 
 ---
