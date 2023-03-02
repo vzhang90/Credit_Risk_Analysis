@@ -11,15 +11,23 @@ From the [credit card dataset in LendingClub](https://github.com/vzhang90/Credit
 ***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose of trying to solve the challenge of predicting credit card risk***
 
 Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning:
-- Create the training variables by converting the string values into numerical ones using the `get_dummies()` method
-- Create the target variables
-- Check the balance of the target variables
+- Split the Data into training and testing sets with Scikit-learn's `train_test_split` module
+    - Create training variables *(or feature)* by converting the string values into numerical ones using the `get_dummies()` method
+    - Create the target *(or output)* variables
+- Check the balance of target variables
+    - confirms imbalance in training set 
+    - counts the number of instances by class verifies both classes are same size 
 
 ### Resampling Models to Predict Credit Risk
 Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed:
 1) *Naive Random Oversampling* using `RandomOverSampler` algorithm 
+    - randomly oversamples the minority class with `imblearn` library
+    - to increase number of minority class
 2) *Oversampling* using `SMOTE` algorithm  
+    - to increase number of minority class
 3) *Undersamplying* using `ClusterCentroids` algorithm
+    - only uses actual data to decrease size of majority class
+        -involves loss of data so ust be enough usable data
 
 > For each of the above three resampling algorithms:
 >    - Used `LogisticRegression` classifier to make predictions and evaluate the model’s performance
