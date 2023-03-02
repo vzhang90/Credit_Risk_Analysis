@@ -37,7 +37,7 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
-Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Continue using [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables
+Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
 <ol start="4">
     <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
         <ol>
