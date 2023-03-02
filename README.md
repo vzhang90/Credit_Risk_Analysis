@@ -129,17 +129,17 @@ When dealing with imbalanced classification problems, it is often useful to use 
 --- 
 
 #### The six machine learning models employed in this Credit Risk Analysis:
-1) Naive Random Oversampling with `RandomOverSampler' randomly oversamples the minority class with `imblearn` library to increase number of minority class.
+1) ***Naive Random Oversampling*** with `RandomOverSampler' randomly oversamples the minority class with `imblearn` library to increase number of minority class.
 
-2) SMOTE reduces risk of oversampling by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
+2) `SMOTE` reduces risk of ***oversampling*** by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
 
-3) Undersamplying using `ClusterCentroids` identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.Because this algorithm only uses actual data to decrease size of majority class, it involves loss of data where there must be enough usable data. 
+3) ***Undersamplying*** using `ClusterCentroids` identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.Because this algorithm only uses actual data to decrease size of majority class, it involves loss of data where there must be enough usable data. 
 
-4) Combination sampling with SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+4) ***Combination sampling*** with `SMOTEENN` combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 
-5) The Random Forest Classifier samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Because random forest algorithms can run efficiently on large datasets handling thousands of input variables without variable deletion, this machine learning module is very robust against overfitting, outliers, and nonlinear data as all of those weak learners are trained on different pieces of the data. Additionally, this algorithm can also be used to rank the importance of input variables in a natural way.
+5) ***Random Forest Classifier*** samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Because random forest algorithms can run efficiently on large datasets handling thousands of input variables without variable deletion, this machine learning module is very robust against overfitting, outliers, and nonlinear data as all of those weak learners are trained on different pieces of the data. Additionally, this algorithm can also be used to rank the importance of input variables in a natural way.
     
-6) Easy Ensemble AdaBoost Classifier uses the Boosting technique to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
+6) ***Easy Ensemble AdaBoost Classifier*** uses *Boosting technique* to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In *AdaBoost*, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
 
 ---
 
