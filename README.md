@@ -20,19 +20,19 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 
 ### Resampling Models to Predict Credit Risk
 Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed in [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
-1) *Naive Random Oversampling*
+1. *Naive Random Oversampling*
     - resample training data using `RandomOverSampler' algorithm
-2) *Synthetic Minority Oversampling Technique*
+2. *Synthetic Minority Oversampling Technique*
     - resample training data using `SMOTE` algorithm
-3) *Cluster Centroid Undersamplying*
+3. *Cluster Centroid Undersamplying*
     - resample training data using `ClusterCentroids` algorithm
 
->> For each of the above three resampling algorithms:
->>    - use a random state of 1 to ensure consistency between tests
->>    - use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
->>    - calculate the accuracy score of the model
->>    - generate a confusion matrix
->>    - print out the imbalanced classification report
+> ##### For each of the above three resampling algorithms:
+>    - use a random state of 1 to ensure consistency between tests
+>    - use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
+>    - calculate the accuracy score of the model
+>    - generate a confusion matrix
+>    - print out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
@@ -77,7 +77,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ---
 
-1) **Naive Random Oversampling** using `RandomOverSampler`
+1. **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
     - *Balanced Accuracy Score:* 0.39
     - *Precision Score:* 0.99
@@ -85,14 +85,14 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ---
 
-2) `SMOTE` **Oversampling**
+2. `SMOTE` **Oversampling**
 ![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - *Balanced Accuracy Score:* 0.42
     - *Precision Score:* 0.99
     - *Recall Score:* 0.66
 ---
 
-3) **Undersampling** using `ClusterCentroids`
+3. **Undersampling** using `ClusterCentroids`
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - *Balanced Accuracy Score:* 0.42
     - *Precision Score:* 0.99
@@ -100,7 +100,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ---
 
-4) **Combination (Over & Under) Sampling** with `SMOTEENN`
+4. **Combination (Over & Under) Sampling** with `SMOTEENN`
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
     - *Balanced Accuracy Score:* 0.41
     - *Precision Score:* 0.99
@@ -108,7 +108,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ---
 
-5) **`BalancedRandomForestClassifier`**
+5. **`BalancedRandomForestClassifier`**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
     - *Balanced Accuracy Score:* 0.62
     - *Precision Score:* 0.99
@@ -116,7 +116,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ---
 
-6) **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier`
+6. **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier`
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
     - *Balanced Accuracy Score:* 0.86
     - *Precision Score:* 0.99
@@ -127,17 +127,17 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 ## Summary
 **The six machine learning models employed in this Credit Risk Analysis:**
 
-1) ***Naive Random Oversampling*** with `RandomOverSampler` randomly oversamples the minority class with `imblearn` library to increase number of minority class. This is most appropriate if one class has too few instances in the training set where we dneed to choose more instances from that class for training by oversampling until it's larger.
+1. ***Naive Random Oversampling*** with `RandomOverSampler` randomly oversamples the minority class with `imblearn` library to increase number of minority class. This is most appropriate if one class has too few instances in the training set where we dneed to choose more instances from that class for training by oversampling until it's larger.
 
-2) `SMOTE` reduces risk of ***oversampling*** by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
+2. `SMOTE` reduces risk of ***oversampling*** by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
 
-3) ***Undersamplying*** using `ClusterCentroids` identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.Because this algorithm only uses actual data to decrease size of majority class, it involves loss of data where there must be enough usable data. 
+3. ***Undersamplying*** using `ClusterCentroids` identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.Because this algorithm only uses actual data to decrease size of majority class, it involves loss of data where there must be enough usable data. 
 
-4) ***Combination sampling*** with `SMOTEENN` combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+4. ***Combination sampling*** with `SMOTEENN` combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
 
-5) ***Random Forest Classifier*** samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Because random forest algorithms can run efficiently on large datasets handling thousands of input variables without variable deletion, this machine learning module is very robust against overfitting, outliers, and nonlinear data as all of those weak learners are trained on different pieces of the data. Additionally, this algorithm can also be used to rank the importance of input variables in a natural way.
+5. ***Random Forest Classifier*** samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Because random forest algorithms can run efficiently on large datasets handling thousands of input variables without variable deletion, this machine learning module is very robust against overfitting, outliers, and nonlinear data as all of those weak learners are trained on different pieces of the data. Additionally, this algorithm can also be used to rank the importance of input variables in a natural way.
     
-6) ***Easy Ensemble AdaBoost Classifier*** uses *Boosting technique* to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In *AdaBoost*, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
+6. ***Easy Ensemble AdaBoost Classifier*** uses *Boosting technique* to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In *AdaBoost*, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
 
 ---
 
