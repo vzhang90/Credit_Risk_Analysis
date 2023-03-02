@@ -39,13 +39,13 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 Using the `imbalanced-learn` and `scikit-learn` libraries, this fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
 <ol start="4">
     <li><em>Combination Sampling</em> with <code>SMOTEENN</code> </li>
-        <ol>
+        <ul>
             <li> resample the training data using the <code>SMOTEENN</code> algorithm</li>
             <li><code>LogisticRegression</code> classifierto make predictions & evaluate the model’s performance
             <li>calculate the accuracy score of the model</li>
             <li>generate a confusion matrix</li>
             <li>print out the imbalanced classification report</li>
-        </ol>
+        </ul>
 </ol>
 
 ### Ensemble Classifiers to Predict Credit Risk
@@ -55,16 +55,16 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 <ol start="5">
   <li><em>Balanced Random Forest Classifier</em></li>
-    <ol>
+    <ul>
         <li>resample training data using <code>BalancedRandomForestClassifier</code> algorithm with 100 estimators
         <li>calculate the accuracy score of the model, generate a confusion matrix, and print out the imbalanced classification report</li>
         <li>finally, list the features sorted in descending order <em>(from most to least important feature by feature importance)</em>, along with the feature score</li>
-    </ol>
+    </ul>
   <li><em>Easy Ensemble AdaBoost Classifier</em></li>
-    <ol>
+    <ul>
         <li>resample training data using <code>EasyEnsembleClassifier</code> algorithm with 100 estimators</li>
         <li>calculate the accuracy score of the model, generate a confusion matrix, and print out the imbalanced classification report</li>
-    </ol>
+    </ul>
 </ol>
 
 ## Results
