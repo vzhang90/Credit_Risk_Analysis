@@ -21,7 +21,7 @@ Initially through the `imbalanced-learn` and `scikit-learn` libraries, three **R
 4) Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling***
  
 ### Ensemble Classifiers to Predict Credit Risk
-Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report. 
+Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 5) `BalancedRandomForestClassifier` algorithm  
 6) `EasyEnsembleClassifier` algorithm
 
