@@ -23,8 +23,8 @@ Initially through the `imbalanced-learn` and `scikit-learn` libraries, three **R
 ### Ensemble Classifiers to Predict Credit Risk
 Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 <ol start="5">
-  <li>`BalancedRandomForestClassifier` algorithm</li>
-  <li>`EasyEnsembleClassifier` algorithm</li>
+  <li>BalancedRandomForestClassifier algorithm</li>
+  <li> `EasyEnsembleClassifier` algorithm</li>
 </ol>
 
 ## Results
