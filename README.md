@@ -8,7 +8,7 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- ***Applying machine learning to solve the challenge of credit card risk, six different techniques will be employed to train and evaluate models with unbalanced classes.***
+ ***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose in trying to solve the challenge of credit card risk.***
 
 ### Resampling Models to Predict Credit Risk
 Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
@@ -25,8 +25,8 @@ Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine le
 ### Ensemble Classifiers to Predict Credit Risk
 Finally using `imblearn.ensemble` library, the performance of two different *ensemble classifiers* will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 <ol start="5">
-  <li>Balanced Random Forest Classifier using <code>BalancedRandomForestClassifier</code> algorithm</li>
-  <li>Easy Ensemble AdaBoost Classifier using <code>EasyEnsembleClassifier</code> algorithm</li>
+  <li><em>Balanced Random Forest Classifier</em> using <code>BalancedRandomForestClassifier</code> algorithm</li>
+  <li><em>Easy Ensemble AdaBoost Classifier</em> using <code>EasyEnsembleClassifier</code> algorithm</li>
 </ol>
 
 ## Results
