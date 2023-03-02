@@ -21,7 +21,7 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 4) Then using the `SMOTEENN` algorithm, the dataset will be **resampled** with a combinatorial approach of ***over-*** and ***undersampling***
  
 ### Ensemble Classifiers to Predict Credit Risk
-Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report. 
 5) `BalancedRandomForestClassifier` algorithm  
 6) `EasyEnsembleClassifier` algorithm
 
@@ -35,7 +35,7 @@ Six machine learning models were used to calculate the balance accuracy score, p
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
 4) **Combination (Over and Under) Sampling** with `SMOTEENN` algorithm
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
-5) **Balanced Forest Classifier**
+5) **Balanced Random Forest Classifier**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
 6) **Easy Ensemble AdaBoost Classifier**
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
