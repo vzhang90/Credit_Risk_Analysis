@@ -20,14 +20,12 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 
 ### Resampling Models to Predict Credit Risk
 Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
-1) *Naive Random Oversampling* using `RandomOverSampler` algorithm 
-    - randomly oversamples the minority class with `imblearn` library
-    - to increase number of minority class
-2) *Oversampling* using `SMOTE` algorithm  
-    - to increase number of minority class
-3) *Undersamplying* using `ClusterCentroids` algorithm
-    - only uses actual data to decrease size of majority class
-        -involves loss of data so ust be enough usable data
+1) *Naive Random Oversampling*
+    - Resample training data using `RandomOverSampler' algorithm
+2) Synthetic Minority Oversampling Technique
+    - Resample training data using `SMOTE` algorithm
+3) Cluster Centroid Undersamplying
+    - Resample training data using `ClusterCentroids` algorithm
 
 > For each of the above three resampling algorithms:
 >    - Used `LogisticRegression` classifier to make predictions and evaluate the model’s performance
@@ -39,7 +37,7 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 ### SMOTEENN algorithm to Predict Credit Risk
 Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
 <ol start="4">
-    <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
+    <li><em>Combination Sampling</em> with <code>SMOTEENN</code> </li>
         <ol>
             <li> Resample the training data using the <code>SMOTEENN</code> algorithm</li>
             <li> After the data was resampled, the <code>LogisticRegression</code> classifier is employed to make predictions & evaluate the model’s performance
@@ -128,10 +126,30 @@ When dealing with imbalanced classification problems, it is often useful to use 
 
 >> **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
 
+Naive Random Oversampling with `RandomOverSampler' randomly oversamples the minority class with `imblearn` library to increase number of minority class.
+
+SMOTE reduces risk of oversampling by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
+
+Undersamplying using `ClusterCentroids` identifies clusters of the majority class, then generates synthetic data points, called centroids, that are representative of the clusters. The majority class is then undersampled down to the size of the minority class.Because this algorithm only uses actual data to decrease size of majority class, it involves loss of data where there must be enough usable data. 
+
+Combination sampling with SMOTEENN combines the SMOTE and Edited Nearest Neighbors (ENN) algorithms to oversample the minority class with SMOTE and clean the resulting data with an undersamplying strategy. If the two nearest neighbors of a data point belong to two different classes, that data point is dropped.
+
+The concept of ensemble learning is the process of combining multiple models, like decision tree algorithms, to help improve the accuracy and robustness, as well as decrease variance of the model
+
+The Random Forest Classifier samples the data and build several smaller, simpler decision trees (combining many decision trees into a forest of trees). Random forest algorithms are beneficial because:
+    - Are robust against overfitting as all of those weak learners are trained on different pieces of the data
+    - Can be used to rank the importance of input variables in a natural way
+    - Can handle thousands of input variables without variable deletion
+    - Are robust to outliers and nonlinear data
+    - Run efficiently on large datasets
+
+Easy Ensemble AdaBoost Classifier uses the Boosting technique to combine weak learners sequentially into a combined result, as one model learns from the mistakes of the previous model. In AdaBoost, a model is trained then evaluated. After evaluating the errors of the first model, another model is trained. This time, however, the model gives extra weight to the errors from the previous model. The purpose of this weighting is to minimize similar errors in subsequent models. Then, the errors from the second model are given extra weight for the third model. This process is repeated until the error rate is minimized.
 
 Comparatively between the imbalanced classification reports of the six machine learning models:
 - the **Easy Ensemble AdaBoost Classifier** using `EasyEnsembleClassifier` is best in predicting both the majority and minority classes because of its highest ***Balanced Accuracy Score=0.86***
 - As shown with the ***Recall Score=0.94***, the **Easy Ensemble AdaBoost Classifier** machine learning model using the `EasyEnsembleClassifier` algorithm is also best at making the fewest false negative predictions
 - All models make equally few false negative predictions as shown in each of ***Precision Scores=0.99***
+
+
 
 Between these six machine learning models, I would recommend the **Easy Ensemble AdaBoost Classifer** machine learning model using the `EasyEnsembleClassifier` algorithm to use in predicting credit risk.
