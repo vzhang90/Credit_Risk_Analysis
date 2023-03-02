@@ -70,7 +70,9 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 ## Results
 ***When dealing with imbalanced classification problems, it is often useful to use metrics beyond just overall accuracy, as accuracy can be misleading in such scenarios. Six machine learning models were employed to calculate the balance accuracy score, precision, and recall scores (as shown in each model's imbalanced classification report below).***
 >> **Balanced accuracy score:** the average of the recall scores of all classes, which is calculated by summing up the recall scores of all classes and dividing by the number of classes. It provides a more reliable evaluation of a model's performance when the classes are imbalanced, as it takes into account the fact that the model might be performing well on the majority class but poorly on the minority class. 
+
 >> **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.  
+
 >> **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
 
 ---
