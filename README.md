@@ -62,16 +62,22 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
     </ol>
   <li><em>Easy Ensemble AdaBoost Classifier</em></li>
     <ol>
-        <li>resampled training data using <code>EasyEnsembleClassifier</code> algorithm with 100 estimators</li>
+        <li>resample training data using <code>EasyEnsembleClassifier</code> algorithm with 100 estimators</li>
         <li>calculate the accuracy score of the model, generate a confusion matrix, and print out the imbalanced classification report</li>
     </ol>
 </ol>
 
 ## Results
-***Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:***
+***When dealing with imbalanced classification problems, it is often useful to use metrics beyond just overall accuracy, as accuracy can be misleading in such scenarios***
+>> **Balanced accuracy score:** the average of the recall scores of all classes, which is calculated by summing up the recall scores of all classes and dividing by the number of classes. It provides a more reliable evaluation of a model's performance when the classes are imbalanced, as it takes into account the fact that the model might be performing well on the majority class but poorly on the minority class. 
+
+>> **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.  
+
+>> **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
 
 ---
 
+#### Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
 1) **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
     - *Balanced Accuracy Score:* 0.39
@@ -120,16 +126,8 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 ---
 
 ## Summary
-When dealing with imbalanced classification problems, it is often useful to use metrics beyond just overall accuracy, as accuracy can be misleading in such scenarios.
->> **Balanced accuracy score:** the average of the recall scores of all classes, which is calculated by summing up the recall scores of all classes and dividing by the number of classes. It provides a more reliable evaluation of a model's performance when the classes are imbalanced, as it takes into account the fact that the model might be performing well on the majority class but poorly on the minority class. 
+**The six machine learning models employed in this Credit Risk Analysis:**
 
->> **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.  
-
->> **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
-
---- 
-
-#### The six machine learning models employed in this Credit Risk Analysis:
 1) ***Naive Random Oversampling*** with `RandomOverSampler` randomly oversamples the minority class with `imblearn` library to increase number of minority class. This is most appropriate if one class has too few instances in the training set where we dneed to choose more instances from that class for training by oversampling until it's larger.
 
 2) `SMOTE` reduces risk of ***oversampling*** by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
