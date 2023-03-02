@@ -8,7 +8,7 @@ Credit risk is an inherently unbalanced classification problem, as good loans ea
 From the [credit card dataset in LendingClub](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv)<sub>(a peer-to-peer lending services company)</sub>, Python will be used to build and evaluate several machine learning models to predict credit risk with the goal of helping banks and financial institutions better navigate anomalies, reduce risk cases, monitor portfolios, and provide recommendations on what to do in cases of fraud.
 
 ## Overview of Analysis
-***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose in trying to solve the challenge of predicting credit card risk***
+***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose of trying to solve the challenge of predicting credit card risk***
 
 Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning:
 - Create the training variables by converting the string values into numerical ones using the `get_dummies()` method
@@ -16,7 +16,7 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 - Check the balance of the target variables
 
 ### Resampling Models to Predict Credit Risk
-Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed:
 1) *Naive Random Oversampling* using `RandomOverSampler` algorithm 
 2) *Oversampling* using `SMOTE` algorithm  
 3) *Undersamplying* using `ClusterCentroids` algorithm
@@ -29,11 +29,11 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
-Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Continue using [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables to view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Continue using [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables
 <ol start="4">
     <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
         <ol>
-            <li> resample the training data using the <code>SMOTEENN</code> algorithm</li>
+            <li> Resample the training data using the <code>SMOTEENN</code> algorithm</li>
             <li> After the data was resampled, the <code>LogisticRegression</code> classifier is employed to make predictions & evaluate the model’s performance
             <li>Calculated the accuracy score of the model</li>
             <li>Generated a confusion matrix</li>
@@ -42,9 +42,9 @@ Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine le
 </ol>
 
 ### Ensemble Classifiers to Predict Credit Risk
-Finally using `imblearn.ensemble` library, the performance of two different *ensemble classifiers* will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Finally using `imblearn.ensemble` library, the performance of two different *ensemble classifiers* will resample the dataset by randomly undersampling boostrap samples to reduce bias.
 
-Because the code for ensemble classifiers is separate in the [credit_risk_ensemble.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb), a training and target variable will be created again after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning.
+Because the code for ensemble classifiers is separate in the [credit_risk_ensemble.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb), a training and target variable will be created newly again after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning.
 
 <ol start="5">
   <li><em>Balanced Random Forest Classifier</em> using <code>BalancedRandomForestClassifier</code> algorithm</li>
@@ -64,41 +64,68 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 ***Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:***
 
 ---
+
 1) **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
     - Balanced Accuracy Score: 0.39
     - Precision Score: 0.99
     - Recall Score: 0.65
+
 ---
+
 2) `SMOTE` **Oversampling**
 ![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - Balanced Accuracy Score: 0.42
     - Precision Score: 0.99
     - Recall Score: 0.66
 ---
+
 3) **Undersampling** using `ClusterCentroids`
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
     - Balanced Accuracy Score: 0.42
     - Precision Score: 0.99
     - Recall Score: 0.66
+
 ---
+
 4) **Combination (Over & Under) Sampling** with `SMOTEENN`
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
     - Balanced Accuracy Score: 0.41
     - Precision Score: 0.99
     - Recall Score: 0.58
+
 ---
+
 5) **`BalancedRandomForestClassifier`**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
     - Balanced Accuracy Score: 0.62
     - Precision Score: 0.99
     - Recall Score: 0.58
+
 ---
+
 6) **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier`
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
     - Balanced Accuracy Score: 0.86
     - Precision Score: 0.99
     - Recall Score: 0.94
+
 ---
 
 ## Summary
+When dealing with imbalanced classification problems, it is often useful to use metrics beyond just overall accuracy, as accuracy can be misleading in such scenarios.
+- **Balanced accuracy score:** the average of the recall scores of all classes, which is calculated by summing up the recall scores of all classes and dividing by the number of classes. It provides a more reliable evaluation of a model's performance when the classes are imbalanced, as it takes into account the fact that the model might be performing well on the majority class but poorly on the minority class. 
+- **Precision score:** The precision score is the ratio of true positives to the total number of positive predictions, measuring the proportion of positive predictions that were actually true positives.
+- **Recall score:** the ratio of true positives to the total number of actual positives, measuring the proportion of actual positives that were correctly identified by the model.
+
+A high balanced accuracy score means that the model is performing well in predicting both the majority and minority classes.
+A high precision score indicates that the model makes few false positive predictions.
+A high recall score indicates that the model makes few false negative predictions.
+
+Comparatively between the imbalanced classification reports of the six machine learning models:
+- the Easy Ensemble AdaBoost Classifier with `EasyEnsembleClassifier` is best at performing well in predicting both the majority and minority classes because of its highest **Balanced Accuracy Score** of 0.86
+- As shown with the **Recall Score** of 0.94, the Easy Ensemble AdaBoost Classifier machine learning model with `EasyEnsembleClassifier` algorithis also best at making the fewest false negative predictions 
+
+The technical analysis from the six machine learning models indicate each model makes few false negative predictions as shown in each of **Precision Scores** equal to 0.99
+
+Between these six machine learning models, I would recommend the Easy Ensemble AdaBoost Classifer to use in predicting credit risk.
