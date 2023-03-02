@@ -14,7 +14,7 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 - Split the Data into training and testing sets with Scikit-learn's `train_test_split` module
     - Create training variables *(or feature)* by converting the string values into numerical ones using the `get_dummies()` method
     - Create the target *(or output)* variables
-- Check the balance of target variables
+- Check balance of target variables
     - confirms imbalance in training set 
     - counts the number of instances by class verifies both classes are same size 
 
