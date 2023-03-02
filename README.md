@@ -14,7 +14,7 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 - Split the Data into training and testing sets with Scikit-learn's `train_test_split` module
     - Create training variables *(or feature)* by converting the string values into numerical ones using the `get_dummies()` method
     - Create target *(or output)* variables
-        - Checke balance of target variables
+        - Check balance of target variables
             - *confirms imbalance in training set*
             - *counts the number of instances by class to verify both classes are same size* 
 
@@ -22,9 +22,9 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
 1) *Naive Random Oversampling*
     - Resample training data using `RandomOverSampler' algorithm
-2) Synthetic Minority Oversampling Technique
+2) *Synthetic Minority Oversampling Technique*
     - Resample training data using `SMOTE` algorithm
-3) Cluster Centroid Undersamplying
+3) *Cluster Centroid Undersamplying*
     - Resample training data using `ClusterCentroids` algorithm
 
 > For each of the above three resampling algorithms:
