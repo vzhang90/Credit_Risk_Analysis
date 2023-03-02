@@ -31,6 +31,7 @@ Finally using `imblearn.ensemble` library, the performance of two different *ens
 
 ## Results
 Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
+---
 1) **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
     - Balanced Accuracy Score:
