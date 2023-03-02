@@ -14,9 +14,9 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
 - Split the Data into training and testing sets with Scikit-learn's `train_test_split` module
     - Create training variables *(or feature)* by converting the string values into numerical ones using the `get_dummies()` method
     - Create the target *(or output)* variables
-- Check balance of target variables
-    - confirms imbalance in training set 
-    - counts the number of instances by class verifies both classes are same size 
+        - Check balance of target variables
+            - *confirms imbalance in training set*
+            - *counts the number of instances by class to verify both classes are same size* 
 
 ### Resampling Models to Predict Credit Risk
 Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
