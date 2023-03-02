@@ -19,31 +19,32 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
             - *counts the number of instances by class to verify both classes are same size* 
 
 ### Resampling Models to Predict Credit Risk
-Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
+Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed in [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
 1) *Naive Random Oversampling*
-    - Resample training data using `RandomOverSampler' algorithm
+    - resample training data using `RandomOverSampler' algorithm
 2) *Synthetic Minority Oversampling Technique*
-    - Resample training data using `SMOTE` algorithm
+    - resample training data using `SMOTE` algorithm
 3) *Cluster Centroid Undersamplying*
-    - Resample training data using `ClusterCentroids` algorithm
+    - resample training data using `ClusterCentroids` algorithm
 
 > For each of the above three resampling algorithms:
->    - Use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
->    - Calculate the accuracy score of the model
->    - Generate a confusion matrix
->    - Print out the imbalanced classification report
+>    - use a random state of 1 to ensure consistency between tests
+>    - use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
+>    - calculate the accuracy score of the model
+>    - generate a confusion matrix
+>    - print out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
-Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
+Using the `imbalanced-learn` and `scikit-learn` libraries, this fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
 <ol start="4">
     <li><em>Combination Sampling</em> with <code>SMOTEENN</code> </li>
         <ol>
-            <li> Resample the training data using the <code>SMOTEENN</code> algorithm</li>
-            <li> After the data was resampled, the <code>LogisticRegression</code> classifier is employed to make predictions & evaluate the model’s performance
-            <li>Calculated the accuracy score of the model</li>
-            <li>Generated a confusion matrix</li>
-            <li>Printed out the imbalanced classification report</li>
+            <li> resample the training data using the <code>SMOTEENN</code> algorithm</li>
+            <li><code>LogisticRegression</code> classifierto make predictions & evaluate the model’s performance
+            <li>calculate the accuracy score of the model</li>
+            <li>generate a confusion matrix</li>
+            <li>print out the imbalanced classification report</li>
         </ol>
 </ol>
 
@@ -55,9 +56,9 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 <ol start="5">
   <li><em>Balanced Random Forest Classifier</em></li>
     <ol>
-        <li>Resampled training data using <code>BalancedRandomForestClassifier</code> algorithm with 100 estimators
-        <li>Then, calculated the accuracy score of the model, generated a confusion matrix, and printed out the imbalanced classification report</li>
-        <li>Finally, listed the features sorted in descending order <em>(from most to least important feature by feature importance)</em>, along with the feature score</li>
+        <li>resample training data using <code>BalancedRandomForestClassifier</code> algorithm with 100 estimators
+        <li>calculate the accuracy score of the model, generate a confusion matrix, and print out the imbalanced classification report</li>
+        <li>Finally, list the features sorted in descending order <em>(from most to least important feature by feature importance)</em>, along with the feature score</li>
     </ol>
   <li><em>Easy Ensemble AdaBoost Classifier</em></li>
     <ol>
@@ -129,7 +130,7 @@ When dealing with imbalanced classification problems, it is often useful to use 
 --- 
 
 #### The six machine learning models employed in this Credit Risk Analysis:
-1) ***Naive Random Oversampling*** with `RandomOverSampler' randomly oversamples the minority class with `imblearn` library to increase number of minority class.
+1) ***Naive Random Oversampling*** with `RandomOverSampler` randomly oversamples the minority class with `imblearn` library to increase number of minority class. This is most appropriate if one class has too few instances in the training set where we dneed to choose more instances from that class for training by oversampling until it's larger.
 
 2) `SMOTE` reduces risk of ***oversampling*** by also increasing number of minority class, but it does not always outperform random sampling because of its vulnerability to outliers.
 
