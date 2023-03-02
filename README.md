@@ -55,13 +55,13 @@ Finally using `imblearn.ensemble` library, the performance of two different *ens
 Because the code for ensemble classifiers is separate in the [credit_risk_ensemble.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb), a training and target variable will be created newly again after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning.
 
 <ol start="5">
-  <li><em>Balanced Random Forest Classifier</em> using <code>BalancedRandomForestClassifier</code> algorithm</li>
+  <li><em>Balanced Random Forest Classifier</em></li>
     <ol>
         <li>Resampled training data using <code>BalancedRandomForestClassifier</code> algorithm with 100 estimators
         <li>Then, calculated the accuracy score of the model, generated a confusion matrix, and printed out the imbalanced classification report</li>
         <li>Finally, printed the feature importance sorted in descending order (from most to least important feature), along with the feature score</li>
     </ol>
-  <li><em>Easy Ensemble AdaBoost Classifier</em> using <code>EasyEnsembleClassifier</code> algorithm</li>
+  <li><em>Easy Ensemble AdaBoost Classifier</em></li>
     <ol>
         <li>Resampled the training data using <code>EasyEnsembleClassifier</code> algorithm with 100 estimators</li>
         <li>After resampling data, calculated the accuracy score of the model, generated a confusion matrix, and printed out the imbalanced classification report</li>
