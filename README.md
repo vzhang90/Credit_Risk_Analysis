@@ -8,16 +8,21 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- ***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose in trying to solve the challenge of credit card risk.***
+ > ***This Credit Risk Analysis will apply machine learning through six different techniques to train and evaluate models with unbalanced classes with the purpose in trying to solve the challenge of credit card risk.***
+
+Initially after reading the CSV file and performing Basic Data Cleaning:
+- Create the training variables by converting the string values into numerical ones using the `get_dummies()` method
+- Create the target variables
+- Check the balance of the target variables
 
 ### Resampling Models to Predict Credit Risk
-Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 1) *Naive Random Oversampling* using `RandomOverSampler` algorithm 
 2) *Oversampling* using `SMOTE` algorithm  
 3) *Undersamplying* using `ClusterCentroids` algorithm
 
 ### SMOTEENN algorithm to Predict Credit Risk
-Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling* 
+Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling* to view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 <ol start="4">
     <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
 </ol>
