@@ -18,7 +18,9 @@ Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Re
 
 ### SMOTEENN algorithm to Predict Credit Risk
 Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling* 
-4) *Combination (Over & Under) Sampling* using `SMOTEENN` algorithm
+<ol start="4">
+    <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
+</ol>
 
 ### Ensemble Classifiers to Predict Credit Risk
 Finally using `imblearn.ensemble` library, the performance of two different *ensemble classifiers* will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
@@ -47,7 +49,7 @@ Six machine learning models were used to calculate the balance accuracy score, p
     - Precision Score:
     - Recall Score
 
-4) **Combination (Over and Under) Sampling** with `SMOTEENN`
+4) **Combination (Over & Under) Sampling** with `SMOTEENN`
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
     - Balanced Accuracy Score:
     - Precision Score:
