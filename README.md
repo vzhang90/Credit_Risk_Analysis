@@ -8,7 +8,7 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- ***This Credit Risk Analysis applies **six machine learning models** to investigate how each compares at *Predicting Credit Risk***
+ ***This Credit Risk Analysis applies six machine learning models to investigate how each compares at Predicting Credit Risk***
 
 ### Resampling Models to Predict Credit Risk
 Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
