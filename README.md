@@ -8,7 +8,7 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- ***Applying machine learning to solve the challenge of credit card risk, six different techniques will be employeyed to train and evaluate models with unbalanced classes.***
+ ***Applying machine learning to solve the challenge of credit card risk, six different techniques will be employed to train and evaluate models with unbalanced classes.***
 
 ### Resampling Models to Predict Credit Risk
 Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
@@ -31,15 +31,39 @@ Finally using `imblearn.ensemble` library, the performance of two different *ens
 Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
 1) **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 2) `SMOTE` **Oversampling**
 ![SMOTE imblanace classification report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 3) **Undersampling** using `ClusterCentroids`
 ![ClusterCentroids classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTE_oversampling_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 4) **Combination (Over and Under) Sampling** with `SMOTEENN`
 ![SMOTEEN classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/SMOTEENN_combosampling_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 5) **`BalancedRandomForestClassifier`**
 ![balanced forest classifier](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/balanced_random_forest_classifier_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 6) **Easy Ensemble AdaBoost Classifier** with `EasyEnsembleClassifier`
 ![ECC classification report imbalanced](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/ECC_imbclass.png)
+    - Balanced Accuracy Score:
+    - Precision Score:
+    - Recall Score
+
 
 ## Summary
