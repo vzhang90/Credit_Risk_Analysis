@@ -27,6 +27,7 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 3. *Cluster Centroid Undersamplying*
     - resample training data using `ClusterCentroids` algorithm
 
+---
 
 > For each of the above three resampling algorithms:
 > - use a random state of 1 to ensure consistency between tests
@@ -35,6 +36,7 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
 > - generate a confusion matrix
 > - print out the imbalanced classification report
 
+---
 
 ### SMOTEENN algorithm to Predict Credit Risk
 Using the `imbalanced-learn` and `scikit-learn` libraries, this fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Building off the [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables:
