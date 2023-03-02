@@ -22,8 +22,8 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 
 --- 
 ### Ensemble Classifiers to Predict Credit Risk
-Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
-5) `BalancedRandomForestClassifier` algorithm
+Finally using `imblearn.ensemble` library, the performance of two different ensemble classifiers will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.  
+5) `BalancedRandomForestClassifier` algorithm  
 6) `EasyEnsembleClassifier` algorithm
 
 ## Results
