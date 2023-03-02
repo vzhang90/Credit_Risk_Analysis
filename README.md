@@ -19,7 +19,7 @@ Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhan
     - counts the number of instances by class verifies both classes are same size 
 
 ### Resampling Models to Predict Credit Risk
-Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed:
+Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will be employed [credit_risk_resampling.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb):
 1) *Naive Random Oversampling* using `RandomOverSampler` algorithm 
     - randomly oversamples the minority class with `imblearn` library
     - to increase number of minority class
