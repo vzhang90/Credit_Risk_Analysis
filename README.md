@@ -13,8 +13,8 @@ From the [credit card dataset in LendingClub](https://github.com/vzhang90/Credit
 Initially after reading the [LoanStats_2019Q1.csv file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/LoanStats_2019Q1.csv) and performing Basic Data Cleaning:
 - Split the Data into training and testing sets with Scikit-learn's `train_test_split` module
     - Create training variables *(or feature)* by converting the string values into numerical ones using the `get_dummies()` method
-    - Create the target *(or output)* variables
-        - Check balance of target variables
+    - Create target *(or output)* variables
+        - Checke balance of target variables
             - *confirms imbalance in training set*
             - *counts the number of instances by class to verify both classes are same size* 
 
@@ -28,10 +28,10 @@ Through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling M
     - Resample training data using `ClusterCentroids` algorithm
 
 > For each of the above three resampling algorithms:
->    - Used `LogisticRegression` classifier to make predictions and evaluate the model’s performance
->    - Calculated the accuracy score of the model
->    - Generated a confusion matrix
->    - Printed out the imbalanced classification report
+>    - Use `LogisticRegression` classifier to make predictions and evaluate the model’s performance
+>    - Calculate the accuracy score of the model
+>    - Generate a confusion matrix
+>    - Printe out the imbalanced classification report
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
