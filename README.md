@@ -29,11 +29,10 @@ For each of the above three resampling algorithms:
 
 
 ### SMOTEENN algorithm to Predict Credit Risk
-Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling* to view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Using the `imbalanced-learn` and `scikit-learn` libraries, the fourth machine learning model will resample the data using a combinatorial approach of *over-* and *undersampling*. Continue using [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from the first three resampling models with the already created training and target variables to view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 <ol start="4">
     <li><em>Combination (Over & Under) Sampling</em> using <code>SMOTEENN</code> algorithm</li>
         <ol>
-            <li>Continue using [credit_risk_resampling.ipynb file](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_resampling.ipynb) from first three resampling models with the already created training and target variables</li>
             <li> resample the training data using the <code>SMOTEENN</code> algorithm</li>
             <li> After the data was resampled, the <code>LogisticRegression</code> classifier is employed to make predictions & evaluate the model’s performance
             <li>Calculated the accuracy score of the model</li>
@@ -63,6 +62,7 @@ Because the code for ensemble classifiers is separate in the [credit_risk_ensemb
 
 ## Results
 Six machine learning models were used to calculate the balance accuracy score, precision, and recall scores:
+
 ---
 1) **Naive Random Oversampling** using `RandomOverSampler`
 ![Naive Random Oversampling Imbalanced Classification Report](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/images/naive_random_sampling_imbclass.png)
