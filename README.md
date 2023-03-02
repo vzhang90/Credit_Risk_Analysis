@@ -8,20 +8,20 @@ From the credit card dataset in LendingClub <sub>(a peer-to-peer lending service
 > <sub>**Ensemble Classifers code:** [credit_risk_ensemble.ipynb](https://github.com/vzhang90/Credit_Risk_Analysis/blob/main/credit_risk_ensemble.ipynb)</sub>
 
 ## Overview of Analysis
- This Credit Risk Analysis applies **six machine learning models** to investigate how each compares at *Predicting Credit Risk*
+ ***This Credit Risk Analysis applies **six machine learning models** to investigate how each compares at *Predicting Credit Risk***
 
 ### Resampling Models to Predict Credit Risk
-Initially through the `imbalanced-learn` and `scikit-learn` libraries, three ***Resampling Models*** will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
-1) ***Naive Random Oversampling*** using the `RandomOverSampler` algorithm 
-2) ***Oversampling*** using the `SMOTE` algorithms  
-3) ***Undersamplying*** using the `ClusterCentroids` algorithm
+Initially through the `imbalanced-learn` and `scikit-learn` libraries, three *Resampling Models* will each view the count of the target classes, train a logistic regression classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+1) *Naive Random Oversampling* using the `RandomOverSampler` algorithm 
+2) *Oversampling* using the `SMOTE` algorithms  
+3) *Undersamplying* using the `ClusterCentroids` algorithm
 
 ### SMOTEENN algorithm to Predict Credit Risk
-4) Then using the `SMOTEENN` algorithm, the dataset will be ***resampled*** with a combinatorial approach of ***over-*** and ***undersampling***
+4) Then using the `SMOTEENN` algorithm, the dataset will be *resampled* with a combinatorial approach of *over-* and *undersampling*
 
 ---
 ### Ensemble Classifiers to Predict Credit Risk
-Finally using `imblearn.ensemble` library, the performance of two different ***ensemble classifiers*** will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
+Finally using `imblearn.ensemble` library, the performance of two different *ensemble classifiers* will resample the dataset, view the count of the target classes, train the ensemble classifier, calculate the balanced accuracy score, generate a confusion matrix, and generate a classification report.
 <ol start="5">
   <li><code>BalancedRandomForestClassifier</code> algorithm to randomly undersample each boostrap sample to balance it</li>
   <li><code>EasyEnsembleClassifier</code> algorithm</li>
